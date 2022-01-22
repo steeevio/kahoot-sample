@@ -1,0 +1,11 @@
+@charset "utf-8";
+@import "./variables";
+@import "./flex-products";
+@import "./steps";
+@import "./tabbed";
+@import "./modal";
+
+
+html {
+  scroll-behavior: smooth;
+}

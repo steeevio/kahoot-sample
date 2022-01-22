@@ -1,0 +1,39 @@
+{
+  "name": "chemistries-supplies-lp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "assets/main.js",
+  "scripts": {
+    "test": "test",
+    "build": "webpack --config webpack.config.js",
+    "serve": "webpack-dev-server --mode development --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.torpedo.agency:agilent/chemistries-supplies-lp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "autoprefixer": "^10.3.7",
+    "babel-loader": "^8.2.2",
+    "copy-webpack-plugin": "^9.0.1",
+    "css-loader": "^6.4.0",
+    "cssnano": "^5.0.8",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.4.0",
+    "mini-css-extract-plugin": "^2.4.2",
+    "postcss-loader": "^6.2.0",
+    "sass": "^1.43.2",
+    "sass-loader": "^12.2.0",
+    "style-loader": "^3.3.0",
+    "webpack": "^5.59.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.3.1"
+  },
+  "dependencies": {
+    "gsap": "^3.8.0"
+  }
+}
