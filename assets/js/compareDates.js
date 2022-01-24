@@ -1,17 +1,21 @@
 export default function compareDates () {
-  let dobTense = 'past'
   const result = document.getElementById('result')
   const dob = '29/09/1983'
   const msDay = (1000 * 3600 * 24)
+  let dobTense = 'past'
 
+  // format dob for date object
   const dobArray = dob.split('/')
   const dobMonth = dobArray[1] - 1
   const dobDate = new Date(dobArray[2], dobMonth, dobArray[0])
-  const dobDateTime = dobDate.getTime()
 
   const dateNow = new Date()
-  const dateNowTime = dateNow.getTime()
 
+  // get both dates as time strings in ms
+  const dateNowTime = dateNow.getTime()
+  const dobDateTime = dobDate.getTime()
+
+  // calculate days differnce using ms per day
   const difference = dateNowTime - dobDateTime
   let daysDifference = difference / msDay
   daysDifference = Math.round(daysDifference)
@@ -28,15 +32,15 @@ export default function compareDates () {
   const currentMonth = dateNow.getMonth()
   const currentYear = dateNow.getFullYear()
 
+  // birthday is next year if month has already past or it's the same month but the day has past
+  // if it's today its still this year
   let nextBirthdayYear = currentYear
-  if (currentMonth > birthdayMonth) {
+  if ((currentMonth > birthdayMonth) || (birthdayMonth === currentMonth && currentDay > birthdayDay)) {
     nextBirthdayYear = currentYear + 1
-  } else if (birthdayMonth === currentMonth && currentDay > birthdayDay) {
-    nextBirthdayYear = currentYear
   }
 
+  // get next birthday as a string and calculate the difference
   const nextBirthdayTime = new Date(nextBirthdayYear, birthdayMonth, birthdayDay).getTime()
-
   const birthdayDifference = nextBirthdayTime - dateNowTime
   let daysBirthdayDifference = birthdayDifference / msDay
   daysBirthdayDifference = Math.round(daysBirthdayDifference)
