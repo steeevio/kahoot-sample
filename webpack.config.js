@@ -1,5 +1,5 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const CopyPlugin = require('copy-webpack-plugin')
+// const CopyPlugin = require('copy-webpack-plugin')
 // Webpack uses this to work with directories
 const path = require('path')
 const fs = require('fs')
@@ -14,6 +14,8 @@ module.exports = {
   // Path to your entry point. From this file Webpack will begin its work
   entry: './assets/js/main.js',
 
+  // Path and filename of your result bundle.
+  // Webpack will bundle all JavaScript into this file
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '',
@@ -80,7 +82,7 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              outputPath: 'images'
+              outputPath: 'assets/images/'
             }
           }
         ]
@@ -91,13 +93,13 @@ module.exports = {
 
     new MiniCssExtractPlugin({
       filename: 'bundle.css'
-    }),
-    new CopyPlugin({
+    })
+    /* new CopyPlugin({
       patterns: [
         { from: 'images/', to: 'images' },
         { from: 'index.html', to: 'index.html' }
       ]
-    })
+    }) */
   ],
   mode: 'development'
 }

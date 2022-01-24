@@ -1,5 +1,5 @@
 {
-  "name": "chemistries-supplies-lp",
+  "name": "kahoot-sample",
   "version": "1.0.0",
   "description": "",
   "main": "assets/main.js",
@@ -7,10 +7,6 @@
     "test": "test",
     "build": "webpack --config webpack.config.js",
     "serve": "webpack-dev-server --mode development --open"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@gitlab.torpedo.agency:agilent/chemistries-supplies-lp.git"
   },
   "author": "",
   "license": "ISC",
@@ -34,6 +30,7 @@
     "webpack-dev-server": "^4.3.1"
   },
   "dependencies": {
-    "gsap": "^3.8.0"
+    "gsap": "^3.8.0",
+    "url-loader": "^4.1.1"
   }
 }

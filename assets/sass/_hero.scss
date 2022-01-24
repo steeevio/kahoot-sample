@@ -1,0 +1,77 @@
+#hero {
+  padding-top: (70/$base-font)*1rem;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: (70/$base-font)*1rem;
+  background-color: $color-2;
+  position: relative;
+  margin-bottom: 10rem;
+  .container {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: 1000px) {  
+      flex-direction: row;
+    }
+  }
+  .hero-content {
+    flex: 1;
+    z-index: 3;
+    max-width: 90%;  
+    @media screen and (min-width: 1000px) {  
+      max-width: 50%;
+    }
+    .hero-buttons {
+      .btn-wrap {
+        margin-right: 1.25rem;
+      }
+    }
+  }
+  .hero-image {
+    flex: 1;
+    z-index: 2;
+    position: relative;
+    padding-top: 70%;
+    @media screen and (min-width: 1000px) {  
+      padding-top: 40%;
+    }
+    img {
+      width: 100%;
+      position: absolute;
+      top: 40px;
+      left: 0;
+      @media screen and (min-width: 1000px) {  
+        top: 0;
+        width: 120%;
+        left: -10%;
+      }
+    }
+  }
+  .hero-buttons {
+    display: flex;
+  }
+  .ellipse-wrapper {
+    position: absolute;
+    overflow-x: hidden;
+    bottom: -5%;
+    left: 0;
+    width: 100%;
+    padding-top: 20%;
+    position: absolute;
+    z-index: -1;
+    @media screen and (min-width: 800px) {
+      bottom: -15%;
+    }
+    @media screen and (min-width: 1000px) {
+      bottom: -20%;
+    }
+  }
+  .ellipse {
+    overflow: hidden;
+    width: 120%;
+    height: 100%;
+    transform: translateX(-10%);
+    
+  }
+
+} 

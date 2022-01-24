@@ -1,0 +1,25 @@
+header {
+  background-color: $color-2;
+  display: flex;
+  padding: (27/$base-font)*1rem;
+  .logo {
+    margin-right: (16/$base-font)*1rem;
+    .logo-desktop {
+      display: none;
+    }
+    .logo-mobile {
+      display: block;
+    }
+    @media screen and (min-width: 1200px) {  
+      width: (96/$base-font)*1rem;
+      margin-right: (64/$base-font)*1rem;
+
+      .logo-desktop {
+        display: block;
+      }
+      .logo-mobile {
+        display: none;
+      }
+    }
+  }
+}

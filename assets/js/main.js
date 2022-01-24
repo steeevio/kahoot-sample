@@ -1,6 +1,9 @@
-import '../sass/style.scss'
-import flexProducts from './flex-products'
+// import '../sass/style.scss'
+import navigationToggle from './navigationToggle'
+import compareDates from './compareDates'
 
+require('../sass/style.scss')
 window.onload = function () {
-  flexProducts()
+  navigationToggle()
+  compareDates()
 }
